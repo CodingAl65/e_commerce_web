@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restock Products</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Header -->
+<!-- Header with Logo and Navigation -->
+<header class="bg-blue-200 text-white px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-4">
+        <a href="index.html"><img src="./src/asset/Capture-removebg-preview.png" alt="SHOES_Logo" class="h-10"></a>
+       
+    </div>
+    <nav>
+      <ul class="flex space-x-6 text-sm font-medium">
+       
+        <li><a href="checkout.html" class="hover:underline text-black text-lg">Checkout</a></li>
+        <li><a href="restock.html" class="hover:underline text-black text-lg">Restock</a></li>
+        <li class="relative">
+            <a href="#" class=" text-black text-lg">
+                🛒
+              <span id="cart-count" class=" absolute -top-2 -right-4 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full"></span>
+            </a>
+          </li>
+      </ul>
+    </nav>
+  </header>
+  
+  <!-- Form Section -->
+  <main class="max-w-xl mx-auto mt-8 p-6 bg-white shadow-md rounded">
+    <h2 class="text-xl font-bold mb-4">Add a New Product</h2>
+
+    <form id="restock-form" class="space-y-4">
+
+      <div>
+        <label for="product-name" class="block font-medium">Product Name</label>
+        <input type="text" id="product-name" class="w-full border border-gray-300 rounded px-3 py-2" required />
+      </div>
+
+      <div>
+        <label for="product-description" class="block font-medium">Description</label>
+        <textarea id="product-description" class="w-full border border-gray-300 rounded px-3 py-2" required></textarea>
+      </div>
+
+      <div>
+        <label for="product-price" class="block font-medium">Price ($)</label>
+        <input type="number" id="product-price" class="w-full border border-gray-300 rounded px-3 py-2" required />
+      </div>
+
+      <div>
+        <label for="product-stock" class="block font-medium">Stock Quantity</label>
+        <input type="number" id="product-stock" class="w-full border border-gray-300 rounded px-3 py-2" required />
+      </div>
+
+      <div>
+        <label for="product-image" class="block font-medium">Upload Product Image</label>
+        <input type="file" id="product-image" accept="image/*" class="w-full border border-gray-300 rounded px-3 py-2" required />
+      </div>
+
+      <button type="submit" class="bg-black text-white py-2 px-4 rounded hover:bg-gray-800 transition">
+        Add Product
+      </button>
+
+      <p id="success-message" class="text-green-600 mt-4 hidden">✅ Product added successfully!</p>
+    </form>
+  </main>
+   
+  <footer class="bg-blue-200">
+    <div class="flex justify-around mt-10">
+      <a class="text-xl font-semibold mb-4" href="#">Contact us</a>
+     <a class="text-xl font-semibold mb-4" href="#">Bulk Buy</a>
+      <a class="text-xl font-semibold mb-4" href="">Follow Us </a>
+      
+    </div>
+   </footer>
+
+  <!-- JS -->
+  <script src="restock.js"></script>
+</body>
+</html>

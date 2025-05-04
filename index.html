@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SHOES | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans">
+
+  <!-- Header -->
+  <header class="bg-blue-200 text-white px-6 py-4 flex justify-between items-center">
+    <div class="flex items-center space-x-4">
+        <a href="index.html"><img src="./src/asset/Capture-removebg-preview.png" alt="SHOES_Logo" class="h-10"></a>
+       
+    </div>
+    <nav>
+      <ul class="flex space-x-6 text-sm font-medium">
+        
+        
+        <li><a href="checkout.html" class="hover:underline text-black text-lg">Checkout</a></li>
+        <li><a href="restock.html" class="hover:underline text-black text-lg">Restock</a></li>
+        <li class="relative">
+            <a href="#" class=" text-black text-lg">
+                🛒
+              <span id="cart-count" class=" absolute -top-2 -right-4 bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full"></span>
+            </a>
+          </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Owner Section -->
+  <section class="p-6 bg-gray-100 mx-auto">
+    <h2 class="text-2xl font-extrabold mb-2">SHOES</h2>
+    <p class="text-gray-700 text-lg">
+      Welcome to SHOES! Founded by a passionate entrepreneur with a love for stylish and comfortable footwear,
+      our mission is to bring you the finest collection of beauty and shoe-related products to elevate your style
+      and confidence. Every item is carefully selected for quality, uniqueness, comfortability and value.
+    </p>
+  </section>
+
+  <!-- Product Grid -->
+  <main class="p-6 max-w-6xl mx-auto">
+    <div id="products-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Products will be inserted here by JS -->
+    </div>
+  </main>
+
+  <!-- Checkout Popup Button -->
+  <a id="checkout-popup-btn" href="checkout.html"
+     class="hidden fixed bottom-6 right-6 bg-blue-600 text-white px-5 py-3 rounded-full shadow-lg hover:bg-blue-700 transition">
+    🛒 Go to Checkout
+  </a>
+
+  <footer class="bg-blue-200">
+    <div class="flex justify-around mt-10">
+      <a class="text-xl font-semibold mb-4" href="#">Contact us</a>
+      <a class="text-xl font-semibold mb-4" href="#">Bulk Buy</a>
+      <a class="text-xl font-semibold mb-4" href="#">Follow Us</a>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
