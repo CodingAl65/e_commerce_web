@@ -103,8 +103,12 @@ document.addEventListener("DOMContentLoaded", () => {
             customer: { name, email, address }  // Customer details
         };
 
-        // Get the existing list of transactions (or start fresh)
+        const customer = { name, email, address }
+
+        // Get the existing list of customer (or start fresh)
         const transactions = JSON.parse(localStorage.getItem("transactions")) || [];
+        const customers = JSON.parse(localStorage.getItem("customers")) || [];
+        customers.push(customer)
         transactions.push(transaction);  // Add the new transaction
 
         // Save the updated list back to localStorage
@@ -119,6 +123,8 @@ document.addEventListener("DOMContentLoaded", () => {
         cartItemsContainer.innerHTML = "<p>Your cart is now empty.</p>";
         cartTotalElement.textContent = "0.00";
 
+
+        
         // Redirect back to the homepage (index.html)
         window.location.href = "index.html";
     });

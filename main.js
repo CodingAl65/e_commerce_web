@@ -1,6 +1,6 @@
 //  Select the container where we want to display the product cards on the page
 const productsContainer = document.getElementById("products-container");
-
+// const cartCountBadge = document.getElementById('cart-count');       
 //  Get the list of products from localStorage (or use an empty array if nothing is saved yet)
 const products = JSON.parse(localStorage.getItem("newProject_products")) || [];
 
@@ -83,9 +83,13 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// document.addEventListener("DOMContentLoaded", () => {
-// const cartCountBadge = document.getElementById('cart-count');       // Badge showing total item count
-//         // Update and show the badge with the total item count
-//         cartCountBadge.classList.remove('hidden');  // Make sure badge is visible
-//         cartCountBadge.textContent = totalItemCount;  // Set the number on the badge
-//     })
+document.addEventListener("DOMContentLoaded", () => {
+const cartCountBadge = document.getElementById('cart-count');       // Badge showing total item count
+        // Update and show the badge with the total item count
+    const cart = JSON.parse(localStorage.getItem("newProject_cart")) || [];
+
+        const totalItemCount = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+        cartCountBadge.classList.remove('hidden');  // Make sure badge is visible
+        cartCountBadge.textContent = totalItemCount;  // Set the number on the badge
+    })
